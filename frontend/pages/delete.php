@@ -7,10 +7,10 @@ if (isset($_GET['codigo'])) {
   try {
     $sql = "DELETE FROM metas WHERE id = :id";
     $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(':id', $id_recebido);
+    $stmt->bindParam(':id', $idRecebido);
 
     if ($stmt->execute()) {
-      header('Location: index.php');
+      header('Location: ../index.php');
       exit;
     }
   } catch (PDOException $e) {

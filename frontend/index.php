@@ -46,14 +46,13 @@ try {
           <?php foreach ($minhasMetas as $meta): ?>
 
           <tr>
-            <td> <?php echo $meta['titulo']; ?> </td>
+            <td> <?= $meta['titulo'] ?> </td>
 
-            <td> <?php echo $meta['prazo']
-                    ?>; </td>
+            <td> <?= $meta['prazo'] ?> </td>
 
-            <td> <?php echo $meta['descricao'] ?>; </td>
+            <td> <?= $meta['descricao'] ?> </td>
 
-            <td><a href="delete.php" class="btn btn-danger btn-sm">Deletar</a></td>
+            <td><a href="pages/delete.php?codigo=<?= $meta['id'] ?>" class="btn btn-danger btn-sm">Deletar</a></td>
           </tr>
 
           <?php endforeach; ?>
