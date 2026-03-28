@@ -3,17 +3,10 @@ body {
   margin: 0;
   padding: 0;
   background-color: #121212; /* Fundo escuro da página */
-  min-height: 100vh; /* Garante que ocupe a tela toda para alinhar verticalmente */
-
-  /* Flexbox para centralizar tudo */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* CONTAINER (Bootstrap já gerencia a largura, mantemos simples) */
+/* CONTAINER (Bootstrap já gere a largura, mantemos simples) */
 .container {
   display: flex;
   justify-content: center;

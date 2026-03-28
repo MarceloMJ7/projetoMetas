@@ -10,10 +10,15 @@ if (isset($_GET['codigo'])) {
     $stmt->bindParam(':id', $idRecebido);
 
     if ($stmt->execute()) {
+      $_SESSION['mensagem'] = "Meta eliminada com sucesso! 🗑️";
+      $_SESSION['tipo_alerta'] = "danger";
       header('Location: ../index.php');
       exit;
     }
   } catch (PDOException $e) {
-    echo "Erro ao desmontar peça: " . $e->getMessage();
+    $_SESSION['mensagem'] = "Erro ao eliminar a meta: " . $e->getMessage();
+    $_SESSION['tipo_alerta'] = "danger";
+    header('Location: ../index.php');
+    exit;
   }
 }
